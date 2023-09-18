@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> - RuiShu&#39;s Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="万幸得以相识,安卓优化ADBAndroid Debug Bridge（简称ADB）是一种方便的开发工具，可与您的手机交互以进行调试和测试。通过 ADB，开发人员和高级用户可以使用比用户安装的应用程序更大的权限访问,"> 
+    <meta name="author" content="RuiShu2003"> 
+    <link rel="alternative" href="atom.xml" title="RuiShu&#39;s Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content=" - RuiShu&#39;s Blog"/>
+    <meta name="twitter:description" content="万幸得以相识,安卓优化ADBAndroid Debug Bridge（简称ADB）是一种方便的开发工具，可与您的手机交互以进行调试和测试。通过 ADB，开发人员和高级用户可以使用比用户安装的应用程序更大的权限访问,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="RuiShu&#39;s Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content=" - RuiShu&#39;s Blog"/>
+    <meta property="og:description" content="万幸得以相识,安卓优化ADBAndroid Debug Bridge（简称ADB）是一种方便的开发工具，可与您的手机交互以进行调试和测试。通过 ADB，开发人员和高级用户可以使用比用户安装的应用程序更大的权限访问,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">RuiShu&#39;s Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://ruishu2003.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle"></h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title"></h1>
+        <div class="stuff">
+            <span>九月 18, 2023</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="安卓优化"><a href="#安卓优化" class="headerlink" title="安卓优化"></a>安卓优化</h1><h2 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h2><p>Android Debug Bridge（简称ADB）是一种方便的开发工具，可与您的手机交互以进行调试和测试。通过 ADB，开发人员和高级用户可以使用比用户安装的应用程序更大的权限访问 Android 的内置 Linux 命令行 shell。值得注意的是，ADB shell 权限不等于超级用户访问权限，因此您可能仍需要root 设备才能完全控制操作系统。但是，根据您的改装要求，shell 访问足以授予或拒绝权限、更改系统设置值以及执行更多操作。这就是<strong>Shizuku</strong>应用程序发挥作用的地方。</p>
+<h2 id="软件介绍：shizuku"><a href="#软件介绍：shizuku" class="headerlink" title="软件介绍：shizuku"></a>软件介绍：shizuku</h2><p>Shizuku 是一个很好的解决方案，可以解决 Android 改装世界中一个相当复杂的场景：允许第三方应用程序访问系统级应用程序编程接口 (API)。这个想法是运行一个具有 shell 级别权限的专用进程，它充当系统服务器和应用程序之间的代理。开发人员不再依赖于在sushell 中运行命令，而是可以利用 Shizuku 服务器组件来执行提升的操作。</p>
+<p><strong>简而言之，如果应用程序需要只能通过 ADB（或 root）授予的特殊权限，您可以使用 Shizuku 直接从您的 Android 设备授予它们。</strong></p>
+<p>Shizuku 项目是开源的，由 Rikka（又名RikkaW）、Haruue和其他几位开发人员维护。</p>
+<p>最小的性能开销,极快的执行速度（由 Android 的称为“绑定器”的进程间通信机制提供支持）。</p>
+<p>应用程序可以使用 Android 系统 API，只需添加微不足道的代码。</p>
+<p>在 Android 11 及更高版本上，您可以直接在您的设备上设置和启动 Shizuku。</p>
+<h2 id="下载及开启adb"><a href="#下载及开启adb" class="headerlink" title="下载及开启adb"></a>下载及开启adb</h2><p>1.手机上下载酷安</p>
+<p><img src="/img/1.jpg" alt="1"></p>
+<p>2.打开酷安，搜索shizuku，下载安装</p>
+<p><img src="/img/2.jpg" alt="2"></p>
+<p><img src="/img/3.jpg" alt="3"></p>
+<p>3.打开shizuku，选择通过无线调试启动，点击配对</p>
+<p><img src="/img/4.jpg" alt="4"></p>
+<p>如果手机root了，可以开机直接启动</p>
+<p>4.点击开发者选项，进入开发者选项</p>
+<p><img src="/img/5.jpg" alt="5"></p>
+<p><img src="/img/6.jpg" alt="6"></p>
+<p>5.点击无线调试并打开，选择只用配对码配对设备</p>
+<p><img src="/img/7.jpg" alt="7"></p>
+<p><img src="/img/8.jpg" alt="8"></p>
+<p>6.下拉通知中心，输入配对码</p>
+<p><img src="/img/9.jpg" alt="9"></p>
+<p>7.完成配对后点击通过无线调试中的启动</p>
+<p><img src="/img/10.jpg" alt="10"></p>
+<p>8.成功运行</p>
+<p><img src="/img/11.jpg" alt="11"></p>
+<p>注意：手机重启后需要重新开启adb</p>
+<h2 id="可以配合的软件"><a href="#可以配合的软件" class="headerlink" title="可以配合的软件"></a>可以配合的软件</h2><p>我自己用的三个：小黑屋、安装狮、权限狗</p>
+<p><img src="/img/12.jpg" alt="12"></p>
+<p>注意：这三个软件要配合shizuku使用（要开启adb）</p>
+<p><img src="/img/13.jpg" alt="13"></p>
+<h3 id="1-小黑屋"><a href="#1-小黑屋" class="headerlink" title="1.小黑屋"></a>1.小黑屋</h3><p>一个可以冻结应用的工具</p>
+<p>打开进来右上角加号，可以添加不常用应用，节约手机运存</p>
+<p><img src="/img/14.jpg" alt="14"></p>
+<p>右上角三个点点进去，进去设置，点击工作模式选择shizuku</p>
+<p><img src="/img/15.jpg" alt="15"></p>
+<p>重启应用就可以添加软件使用了</p>
+<h3 id="2-权限狗"><a href="#2-权限狗" class="headerlink" title="2.权限狗"></a>2.权限狗</h3><p>一个可以控制权限的工具</p>
+<p><img src="/img/16.jpg" alt="16"></p>
+<p>同样在设置中打开工作模式，选择shizuku</p>
+<h3 id="3-安装狮"><a href="#3-安装狮" class="headerlink" title="3.安装狮"></a>3.安装狮</h3><p>一个可以对安装包版本降级的工具</p>
+<p><img src="/img/17.jpg" alt="17"></p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>8GB运存不打开应用，还有一半多的运行内存</p>
+<p><img src="/img/18.jpg" alt="18"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
