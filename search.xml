@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Welcome to RuiShu!</title>
-    <url>/2023/09/18/hello-world/</url>
-    <content><![CDATA[<p><em><strong>我想你活的</strong></em><br><em><strong>有方向有使命</strong></em><br><em><strong>理性 优秀</strong></em><br><em><strong>与此同时</strong></em><br><em><strong>懂得俗气</strong></em><br><em><strong>诗意的活着</strong></em><br><em><strong>得何足喜</strong></em><br><em><strong>失何足忧</strong></em><br><em><strong>总结</strong></em><br><em><strong>洒脱</strong></em><br><em><strong>浪漫</strong></em><br><em><strong>这是小青年该有的样子</strong></em></p>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2023/09/18/%E5%AE%89%E5%8D%93%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<h1 id="安卓优化"><a href="#安卓优化" class="headerlink" title="安卓优化"></a>安卓优化</h1><h2 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h2><p>Android Debug Bridge（简称ADB）是一种方便的开发工具，可与您的手机交互以进行调试和测试。通过 ADB，开发人员和高级用户可以使用比用户安装的应用程序更大的权限访问 Android 的内置 Linux 命令行 shell。值得注意的是，ADB shell 权限不等于超级用户访问权限，因此您可能仍需要root 设备才能完全控制操作系统。但是，根据您的改装要求，shell 访问足以授予或拒绝权限、更改系统设置值以及执行更多操作。这就是<strong>Shizuku</strong>应用程序发挥作用的地方。</p>
@@ -54,6 +48,12 @@
 <p><img src="/img/17.jpg" alt="17"></p>
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>8GB运存不打开应用，还有一半多的运行内存</p>
 <p><img src="/img/18.jpg" alt="18"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Welcome to RuiShu!</title>
+    <url>/2023/09/18/hello-world/</url>
+    <content><![CDATA[<p><em><strong>我想你活的</strong></em><br><em><strong>有方向有使命</strong></em><br><em><strong>理性 优秀</strong></em><br><em><strong>与此同时</strong></em><br><em><strong>懂得俗气</strong></em><br><em><strong>诗意的活着</strong></em><br><em><strong>得何足喜</strong></em><br><em><strong>失何足忧</strong></em><br><em><strong>总结</strong></em><br><em><strong>洒脱</strong></em><br><em><strong>浪漫</strong></em><br><em><strong>这是小青年该有的样子</strong></em></p>
 ]]></content>
   </entry>
 </search>
